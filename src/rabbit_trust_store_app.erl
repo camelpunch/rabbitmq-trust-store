@@ -62,9 +62,7 @@ edit(Options) ->
     false = lists:keymember(verify_fun, 1, Options),
     %% Only enter those options neccessary for this application.
     lists:keymerge(1, required_options(),
-        [{verify_fun, {delegate(), continue}}|Options]).
-
-delegate() -> fun rabbit_trust_store:whitelisted/3.
+        [{verify_fun, {rabbit_trust_store, whitelisted, continue}}|Options]).
 
 required_options() ->
     [{verify, verify_peer}, {fail_if_no_peer_cert, true}].
