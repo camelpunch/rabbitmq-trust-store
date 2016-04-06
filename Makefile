@@ -20,4 +20,6 @@ include erlang.mk
 # Testing.
 # --------------------------------------------------------------------
 
+WITH_BROKER_TEST_MAKEVARS := \
+        RABBITMQ_CONFIG_FILE=$(CURDIR)/etc/rabbit-test
 WITH_BROKER_TEST_COMMANDS := rabbit_trust_store_test:test()
