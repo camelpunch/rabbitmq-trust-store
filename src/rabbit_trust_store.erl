@@ -13,7 +13,6 @@
 %% Copyright (c) 2007-2016 Pivotal Software, Inc.  All rights reserved.
 %%
 
--module(rabbit_trust_store).
 -behaviour(gen_server).
 
 -export([mode/0, refresh/0, list/0]). %% Console Interface.
